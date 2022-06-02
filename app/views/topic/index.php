@@ -21,7 +21,7 @@
             <h1 class="card-article__title">
                 <a class="card-article__link" href="<?= URLROOT."/article/".$article->slug ?>"><?= $article->title ?></a>
             </h1>
-            <p class="card-article__info"><span><?= $article->author ?></span> • <span><?= $article->article_created ?></span></p>
+            <p class="card-article__info"><span><?= $article->author ?></span> • <span><?= date("F d, Y", strtotime( $article->article_created)) ?></span></p>
         </div>
         <?php
         }
