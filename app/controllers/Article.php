@@ -13,6 +13,7 @@ class Article extends Controller {
         $topics = $this->topicModel->getTopics();
 
         $articleContent = $this->parsedown->text($articleBySlug->content);
+        list($width, $height) = getimagesize( URLROOT . '/public/upload/images/' . $articleBySlug->image);
 
         $data = [
             'title' => $articleBySlug->title,
@@ -21,6 +22,8 @@ class Article extends Controller {
             'updated_at' => $articleBySlug->updated_at,
             'author' => $articleBySlug->author_name,
             'hero' => $articleBySlug->image,
+            'imgWidth' => $width,
+            'imgHeight' => $height,
             'content' => $articleContent,
             'metaTitle' => $articleBySlug->title,
             'metaDesc' => $articleBySlug->description

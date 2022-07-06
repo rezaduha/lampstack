@@ -9,11 +9,14 @@
     <section class="articles-grid">
         <?php
         foreach ($data['articlesByTopic'] as $article) {
+            list($width, $height) = getimagesize( URLROOT . '/public/upload/images/' . $article->image);
         ?>
         <div class="card-article">
             <a href="<?= URLROOT."/article/".$article->slug ?>" class="card-img__link">
                 <img
                     src="<?= URLROOT."/public/upload/images/".$article->image ?>"
+                    width=<?= $width ?>
+                    height=<?= $height ?>
                     alt="<?= $article->title ?>"
                     class="card-article__img"
                 />

@@ -2,7 +2,8 @@
     <div class="post-hero__container">
         <div class="post-hero">
             <a href="<?= URLROOT ?>/article/<?= $data['latestArticle']->article_slug ?>">
-                <img src="<?= URLROOT."/public/upload/images/".$data['latestArticle']->image ?>" alt="<?= $data['latestArticle']->title ?> image" />
+            <?php list($width, $height) = getimagesize( URLROOT . '/public/upload/images/' . $data['latestArticle']->image); ?>
+                <img src="<?= URLROOT."/public/upload/images/".$data['latestArticle']->image ?>" width="<?= $width ?>" height="<?= $height ?>" alt="<?= $data['latestArticle']->title ?> image" />
             </a>
             <div class="post-hero__attr">
                 <span>Latest post</span>
@@ -28,11 +29,14 @@
             <div class="swiper-wrapper">
                 <?php
                 foreach ($data->data as $article) {
+                    list($width, $height) = getimagesize( URLROOT . '/public/upload/images/' . $article->image);
                 ?>
                 <div class="card-article swiper-slide">
                     <a href="<?= URLROOT."/article/".$article->article_slug ?>" class="card-img__link">
                     <img
                         src="<?= URLROOT."/public/upload/images/".$article->image ?>"
+                        width="<?= $width ?>"
+                        height="<?= $height ?>"
                         alt="<?= $article->title ?> image"
                         class="card-article__img"
                     />

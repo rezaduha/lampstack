@@ -3,6 +3,8 @@
         <div class="article-hero__container">
             <img
             src="<?= URLROOT."/public/upload/images/".$data['hero'] ?>"
+            width="<?= $data['imgWidth'] ?>"
+            height="<?= $data['imgHeight'] ?>"
             alt="<?= $data['title'] ?> image"
             class="article-hero__img"
             />
