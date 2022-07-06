@@ -7,6 +7,6 @@
     <meta name="description" content="<?= $data['metaDesc'] ?? "LAMP Stack Website" ?>" />
     <title>LAMP Stack | <?= $data['metaTitle'] ?? "Home" ?></title>
     <link rel="shortcut icon" href="<?= URLROOT ?>/public/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="<?= URLROOT ?>/public/assets/css/main.css">
+    <link rel="stylesheet" href="<?= URLROOT ?>/public/assets/css/main.min.css">
     <link rel="stylesheet" href="<?= URLROOT ?>/public/assets/css/swiper-bundle.min.css">
 </head>
