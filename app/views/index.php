@@ -58,6 +58,5 @@
 <?php require APPROOT . '/views/includes/footer.php' ?>
 <?php require APPROOT . '/views/includes/script.php' ?>
 
-<!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
 <script src="<?= URLROOT ?>/public/assets/js/swiper-bundle.min.js"></script>
 <script src="<?= URLROOT ?>/public/assets/js/carousel.js"></script>
