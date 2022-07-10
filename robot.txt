@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: http://http://202.56.164.148:5001/sitemap.xml
